@@ -1,6 +1,7 @@
 import Banner from "../components/banner/Banner";
 import Choose from "../components/chooseSection/Choose";
 import Navbar from "../components/navbar/Navbar";
+import Pricing from "../components/pricingSection/Pricing";
 import Rating from "../components/ratingSection/Rating";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
         <Rating />
       </div>
       <Choose />
+      <Pricing />
     </div>
   );
 };
