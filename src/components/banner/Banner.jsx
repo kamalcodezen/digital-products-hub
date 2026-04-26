@@ -12,7 +12,7 @@ const Banner = () => {
           <p className="text-sm font-medium">New: AI-Powered Tools Available</p>
         </div>
 
-        <h2 className="text-[clamp(2rem,5vw,3.75rem)] font-bold">
+        <h2 className="text-[clamp(3rem,5vw,3.75rem)] font-bold">
           Supercharge Your <br />
           <span className="bg-linear-to-r from-[#5743ec] to-[#9B5CF6] bg-clip-text text-transparent ">
             {" "}

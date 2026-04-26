@@ -2,7 +2,7 @@ import "./Rating.css";
 
 const Rating = () => {
   return (
-    <section className="my-container my-[clamp(3rem,6vw,7.5rem)] ">
+    <section className="my-container my-[clamp(7rem,6vw,7.5rem)] ">
       <div className="grid grid-cols-1 sm:grid-cols-5 items-center justify-items-center w-full py-15 space-y-6 sm:space-y-0 ">
         <div className="text-center">
           <h2
