@@ -4,7 +4,7 @@ import SelectedProductCart from "./SelectedProductCart";
 
 const ALLTools = ({ productDataFetch,addToCart, setAddToCart}) => {
   const productData = use(productDataFetch);
-  console.log(productData);
+  // console.log(productData);
 
   const [selected, setSelected] = useState("allProduct");
 
@@ -34,7 +34,7 @@ const ALLTools = ({ productDataFetch,addToCart, setAddToCart}) => {
             onClick={() => setSelected("selectedCart")}
             className={`btn rounded-full font-medium px-5.5 duration-500 transition-all ${selected === "selectedCart" ? "bg-linear-to-r from-[#4F39F6]  to-[#9B5CF6] text-white  duration-500 transition-all" : " text-black"} `}
           >
-            Cart (2)
+            Cart ({addToCart.length})
           </button>
         </div>
 
@@ -45,7 +45,7 @@ const ALLTools = ({ productDataFetch,addToCart, setAddToCart}) => {
               <AllProduct productData={productData}  addToCart={addToCart} setAddToCart={setAddToCart}/>
             </div>
           ) : (
-            <SelectedProductCart />
+            <SelectedProductCart  addToCart={addToCart} setAddToCart={setAddToCart}/>
           )}
         </div>
       </div>

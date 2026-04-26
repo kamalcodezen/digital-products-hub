@@ -3,11 +3,27 @@ import { FaCheck } from "react-icons/fa6";
 
 const ProductCart = ({ product, addToCart, setAddToCart }) => {
   const { name, description, price, period, tag, features, icon } = product;
+
   const [isSelected, setIsSelected] = useState(false);
+
+  const handleAddToCart = (product) => {
+    const isExits = addToCart.find((cart) => cart.id == product.id);
+    if (isExits) {
+    //   alert(`player already added`);
+      return;
+    } else {
+      setIsSelected(true);
+      setAddToCart([...addToCart, product]);
+    //   alert(`Cart add success`)
+    }
+  };
+
+//   console.log(addToCart);
 
   return (
     <section>
       <div className={`card mx-auto w-full  shadow-sm relative  rounded-xl `}>
+        {/* badge rendering dynamically */}
         <div className={`card-body space-y-1`}>
           {tag == "best seller" ? (
             <span className="badge badge-xs badge-warning bg-amber-200 py-3 rounded-full border-none px-4 text-amber-800 ml-auto">
@@ -64,9 +80,11 @@ const ProductCart = ({ product, addToCart, setAddToCart }) => {
               </li>
             ))}
           </ul>
+
+          {/* add to cart button */}
           <div className="mt-3">
             <button
-              onClick={() => setIsSelected(true)}
+              onClick={() => handleAddToCart(product)}
               className={`w-full rounded-full px-5 py-2 cursor-pointer font-bold  ${isSelected ? "bg-green-500 text-white" : "bg-gradient-to-r from-[#4F39F6] to-[#9B5CF6] text-white"}
               `}
             >

@@ -1,11 +1,15 @@
+import SelectedCart from "../../ui/SelectedCart";
 
+const SelectedProductCart = ({ addToCart }) => {
+  console.log(addToCart);
 
-const SelectedProductCart = () => {
-    return (
-        <div>
-            <h2 className="text-5xl text-black">Selected products</h2>
-        </div>
-    );
+  return (
+    <div>
+      <div>
+        <SelectedCart addToCart={addToCart}></SelectedCart>
+      </div>
+    </div>
+  );
 };
 
 export default SelectedProductCart;

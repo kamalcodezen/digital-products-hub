@@ -97,7 +97,7 @@ const Navbar = ({ addToCart }) => {
               >
                 <div className="card-body">
                   <span className="text-lg font-bold">
-                    {addToCart.length}Items
+                    {addToCart.length} Items
                   </span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
