@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import AllProduct from "./AllProduct";
 import SelectedProductCart from "./SelectedProductCart";
 
-const ALLTools = () => {
+const ALLTools = ({ productDataFetch }) => {
+  const productData = use(productDataFetch);
+  console.log(productData);
+
   const [selected, setSelected] = useState("allProduct");
 
   return (
@@ -22,14 +25,14 @@ const ALLTools = () => {
           {/* all product */}
           <button
             onClick={() => setSelected("allProduct")}
-            className={`btn rounded-full  font-medium duration-500 transition-all ${selected === "allProduct" ? "bg-linear-to-r from-[#4F39F6]  to-[#9B5CF6] text-white " : "bg-white text-black"} `}
+            className={`btn rounded-full  font-medium duration-500 transition-all ${selected === "allProduct" ? "bg-linear-to-r from-[#4F39F6]  to-[#9B5CF6] text-white " : " text-black"} `}
           >
             Products
           </button>
           {/* selected cart btn */}
           <button
             onClick={() => setSelected("selectedCart")}
-            className={`btn rounded-full font-medium px-5.5 duration-500 transition-all ${selected === "selectedCart" ? "bg-linear-to-r from-[#4F39F6]  to-[#9B5CF6] text-white  duration-500 transition-all" : "bg-white text-black"} `}
+            className={`btn rounded-full font-medium px-5.5 duration-500 transition-all ${selected === "selectedCart" ? "bg-linear-to-r from-[#4F39F6]  to-[#9B5CF6] text-white  duration-500 transition-all" : " text-black"} `}
           >
             Cart (2)
           </button>
@@ -37,7 +40,13 @@ const ALLTools = () => {
 
         {/* component toggle */}
         <div className="mt-10">
-          {selected === "allProduct" ? <AllProduct /> : <SelectedProductCart />}
+          {selected === "allProduct" ? (
+            <div>
+              <AllProduct productData={productData} />
+            </div>
+          ) : (
+            <SelectedProductCart />
+          )}
         </div>
       </div>
     </section>

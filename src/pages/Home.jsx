@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ALLTools from "../components/allTools/ALLTools";
 import Banner from "../components/banner/Banner";
 import Choose from "../components/chooseSection/Choose";
@@ -6,6 +7,8 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 import Pricing from "../components/pricingSection/Pricing";
 import Rating from "../components/ratingSection/Rating";
+
+const productDataFetch = fetch("/productData.json").then((res) => res.json());
 
 const Home = () => {
   return (
@@ -18,7 +21,15 @@ const Home = () => {
         <Rating />
       </div>
 
-      <ALLTools />
+      <Suspense
+        fallback={
+          <div className="flex justify-center py-20">
+            <span className="loading loading-spinner loading-lg text-primary"></span>
+          </div>
+        }
+      >
+        <ALLTools productDataFetch={productDataFetch} />
+      </Suspense>
 
       <Choose />
 

@@ -1,0 +1,77 @@
+const ProductCart = ({ product }) => {
+  const { name, description, price, period, tag, features, icon } = product;
+
+  return (
+    <section>
+      <div className={`card mx-auto w-full  shadow-sm relative  rounded-xl `}>
+        <div className={`card-body space-y-1`}>
+          {tag == "best seller" ? (
+            <span className="badge badge-xs badge-warning bg-amber-200 py-3 rounded-full border-none px-4 text-amber-800 ml-auto">
+              {tag}
+            </span>
+          ) : tag == "popular" ? (
+            <span className="badge badge-xs badge-warning bg-indigo-200 py-3 rounded-full border-none px-4 text-indigo-800 text-[12px] ml-auto">
+              {tag}
+            </span>
+          ) : (
+            <span className="badge badge-xs badge-warning bg-green-200 py-3 rounded-full border-none px-4 text-green-800 text-[12px] ml-auto">
+              {tag}
+            </span>
+          )}
+
+          <div className="w-[50px] h-[50px] flex items-center justify-center bg-gray-100 rounded-full shadow-2xl ">
+            <img src={icon} alt={name} />
+          </div>
+          <div>
+            <div className="space-y-3">
+              <h2 className="text-2xl font-bold">{name}</h2>
+
+              <p className={`text-gray-500`}>{description}</p>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xl">
+              <span className="font-bold text-2xl">${price}</span>/
+              <span className={` text-[16px] text-gray-500`}>{period}</span>
+            </p>
+          </div>
+
+          <ul className="mt-2 flex flex-col flex-1 gap-2 text-xs">
+            {features.map((feature, ind) => (
+              <li key={ind}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  // stroke="black"
+                  stroke={`green`}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+
+                <span className={`text-gray-500`}>{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-3">
+            <button
+              className={`w-full rounded-full px-5 py-2 cursor-pointer font-bold bg-gradient-to-r from-[#4F39F6] to-[#9B5CF6] text-white
+              }`}
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductCart;
