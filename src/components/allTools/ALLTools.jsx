@@ -1,4 +1,6 @@
 import { useState } from "react";
+import AllProduct from "./AllProduct";
+import SelectedProductCart from "./SelectedProductCart";
 
 const ALLTools = () => {
   const [selected, setSelected] = useState("allProduct");
@@ -31,6 +33,11 @@ const ALLTools = () => {
           >
             Cart (2)
           </button>
+        </div>
+
+        {/* component toggle */}
+        <div className="mt-10">
+          {selected === "allProduct" ? <AllProduct /> : <SelectedProductCart />}
         </div>
       </div>
     </section>
