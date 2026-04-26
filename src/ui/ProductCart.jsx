@@ -1,5 +1,9 @@
-const ProductCart = ({ product }) => {
+import { useState } from "react";
+import { FaCheck } from "react-icons/fa6";
+
+const ProductCart = ({ product, addToCart, setAddToCart }) => {
   const { name, description, price, period, tag, features, icon } = product;
+  const [isSelected, setIsSelected] = useState(false);
 
   return (
     <section>
@@ -62,10 +66,17 @@ const ProductCart = ({ product }) => {
           </ul>
           <div className="mt-3">
             <button
-              className={`w-full rounded-full px-5 py-2 cursor-pointer font-bold bg-gradient-to-r from-[#4F39F6] to-[#9B5CF6] text-white
-              }`}
+              onClick={() => setIsSelected(true)}
+              className={`w-full rounded-full px-5 py-2 cursor-pointer font-bold  ${isSelected ? "bg-green-500 text-white" : "bg-gradient-to-r from-[#4F39F6] to-[#9B5CF6] text-white"}
+              `}
             >
-              Buy Now
+              {isSelected ? (
+                <span className="flex items-center justify-center gap-2">
+                  <FaCheck /> Added to Cart!
+                </span>
+              ) : (
+                "Buy Now"
+              )}
             </button>
           </div>
         </div>

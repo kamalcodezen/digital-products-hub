@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import ALLTools from "../components/allTools/ALLTools";
 import Banner from "../components/banner/Banner";
 import Choose from "../components/chooseSection/Choose";
@@ -11,9 +11,12 @@ import Rating from "../components/ratingSection/Rating";
 const productDataFetch = fetch("/productData.json").then((res) => res.json());
 
 const Home = () => {
+
+const [addToCart,setAddToCart]=useState([])
+
   return (
     <div>
-      <Navbar />
+      <Navbar addToCart={addToCart}/>
 
       <Banner />
 
@@ -28,7 +31,7 @@ const Home = () => {
           </div>
         }
       >
-        <ALLTools productDataFetch={productDataFetch} />
+        <ALLTools productDataFetch={productDataFetch} addToCart={addToCart} setAddToCart={setAddToCart}/>
       </Suspense>
 
       <Choose />

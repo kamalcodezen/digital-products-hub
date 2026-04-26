@@ -2,7 +2,7 @@ import { use, useState } from "react";
 import AllProduct from "./AllProduct";
 import SelectedProductCart from "./SelectedProductCart";
 
-const ALLTools = ({ productDataFetch }) => {
+const ALLTools = ({ productDataFetch,addToCart, setAddToCart}) => {
   const productData = use(productDataFetch);
   console.log(productData);
 
@@ -42,7 +42,7 @@ const ALLTools = ({ productDataFetch }) => {
         <div className="mt-10">
           {selected === "allProduct" ? (
             <div>
-              <AllProduct productData={productData} />
+              <AllProduct productData={productData}  addToCart={addToCart} setAddToCart={setAddToCart}/>
             </div>
           ) : (
             <SelectedProductCart />
