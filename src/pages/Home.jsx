@@ -1,4 +1,5 @@
 import Banner from "../components/banner/Banner";
+import Choose from "../components/chooseSection/Choose";
 import Navbar from "../components/navbar/Navbar";
 import Rating from "../components/ratingSection/Rating";
 
@@ -10,6 +11,7 @@ const Home = () => {
       <div className="bg-linear-to-r from-[#4F39F6]  to-[#9B5CF6]">
         <Rating />
       </div>
+      <Choose />
     </div>
   );
 };
