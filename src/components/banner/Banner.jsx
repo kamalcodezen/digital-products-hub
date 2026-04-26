@@ -3,7 +3,7 @@ import bannerImg from "../../assets/products/banner.png";
 
 const Banner = () => {
   return (
-    <section className="my-container flex justify-between items-center gap-5  min-h-screen flex-col md:flex-row ">
+    <section className="my-container flex justify-between items-center gap-5  min-h-screen flex-col md:flex-row pt-4">
       {/* hero content */}
       <div className="py-14 mt-4 md:py-0 md:mt-4">
         <div className="flex items-center gap-2 bg-[#9c5cf63c] py-2 px-3 rounded-full w-fit ">
