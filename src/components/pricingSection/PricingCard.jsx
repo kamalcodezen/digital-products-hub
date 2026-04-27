@@ -5,7 +5,7 @@ const PricingCard = ({ pricing }) => {
 
   return (
     <div
-      className={`card mx-auto w-full  shadow-sm relative  rounded-xl ${
+      className={`card mx-auto w-full shadow-lg relative  rounded-xl ${
         tag === "Most Popular"
           ? "bg-linear-to-r from-[#4F39F6] to-[#9B5CF6] text-white"
           : "bg-white"

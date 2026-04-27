@@ -1,6 +1,6 @@
 const ChooseCard = ({ details }) => {
   return (
-    <div className="card bg-base-100 w-full shadow-sm p-4">
+    <div className="card  bg-base-100 w-full shadow-lg p-4">
       {/* step */}
       <div className="flex justify-center  w-[50px] h-[50px] rounded-full bg-linear-to-r from-[#5743ec] to-[#9B5CF6] ml-auto">
         <p className="flex items-center justify-center text-2xl text-white font-medium">

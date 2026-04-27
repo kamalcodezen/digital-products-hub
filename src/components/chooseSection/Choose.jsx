@@ -21,7 +21,7 @@ const Choose = () => {
       </p>
 
       {/* card */}
-      <div className="grid  lg:grid-cols-3 md:gap-4 lg:gap-10">
+      <div className="grid gap-10 lg:grid-cols-3 md:gap-7 lg:gap-10">
         {chooseData.map((details) => (
           <ChooseCard key={details.id} details={details}></ChooseCard>
         ))}
