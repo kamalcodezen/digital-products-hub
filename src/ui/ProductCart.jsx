@@ -24,7 +24,7 @@ const ProductCart = ({ product, addToCart, setAddToCart }) => {
 
   return (
     <section>
-      <div className={`card mx-auto w-full  shadow-lg relative  rounded-xl `}>
+      <div className={`card mx-auto w-full shadow-lg relative  rounded-xl `}>
         {/* badge rendering dynamically */}
         <div className={`card-body space-y-1 `}>
           {tag == "best seller" ? (
@@ -41,14 +41,14 @@ const ProductCart = ({ product, addToCart, setAddToCart }) => {
             </span>
           )}
 
-          <div className="w-[50px] h-[50px] flex flex-2 items-center justify-center bg-gray-100 rounded-full shadow-2xl ">
+          <div className="w-[50px] h-[50px] flex flex-2  ">
             <img src={icon} alt={name} />
           </div>
           <div >
             <div className="space-y-3 ">
-              <p className="text-2xl min-h-[60px] font-bold mt-4">{name}</p>
+              <p className="text-xl md:min-h-[60px] lg:min-h-[0px] font-bold mt-2">{name}</p>
 
-              <p className={`text-gray-500 min-h-[60px]`}>{description}</p>
+              <p className={`text-gray-500 md:min-h-[80px]  lg:min-h-[60px]`}>{description}</p>
             </div>
           </div>
 
