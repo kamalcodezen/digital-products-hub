@@ -29,7 +29,7 @@ All actions like add, remove, and checkout are shown using React-Toastify alerts
 ---
 
 ## 🌐 Live Site
-👉 https://your-live-link.com
+👉 [https://your-live-link.com](https://fastidious-snickerdoodle-b2e520.netlify.app/features)
 
 ---
 
