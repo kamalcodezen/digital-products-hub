@@ -1,16 +1,37 @@
-# React + Vite
+#  DigiTools - Digital Tools Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Description
+DigiTools is a modern and responsive web application where users can explore and purchase digital tools like AI writers, templates, and productivity software. The platform provides a smooth user experience with cart functionality and real-time updates.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Technologies Used
+- React.js
+- Tailwind CSS
+- DaisyUI
+- JavaScript (ES6+)
+- React-Toastify
+- JSON
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Features
 
-## Expanding the ESLint configuration
+### 🛒 Add to Cart
+Users can add products to the cart and see real-time updates in the navbar.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ❌ Remove Product
+Users can remove selected products from the cart easily.
+
+### 🔔 Toast Notifications
+All actions like add, remove, and checkout are shown using React-Toastify alerts.
+
+---
+
+## 🌐 Live Site
+👉 https://your-live-link.com
+
+---
+
+## 📂 GitHub Repository
+👉 https://github.com/kamalcodezen/digital-products-hub
