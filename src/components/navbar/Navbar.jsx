@@ -17,8 +17,8 @@ const Navbar = ({ addToCart }) => {
   const total = addToCart.reduce((sum, cart) => sum + cart.price, 0);
 
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm my-container">
+    <div className=" sticky top-0 z-50 bg-base-100 shadow-sm" >
+      <div className="navbar  my-container">
         <div className="navbar-start">
           {/* Dropdown menu */}
           <div className="dropdown ">

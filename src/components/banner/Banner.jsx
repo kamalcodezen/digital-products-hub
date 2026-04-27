@@ -6,7 +6,7 @@ const Banner = () => {
     <section className="my-container flex justify-between items-center gap-5  min-h-screen flex-col md:flex-row pt-4">
       {/* hero content */}
       <div className="py-14 mt-4 md:py-0 md:mt-4">
-        <div className="flex items-center gap-2 bg-[#9c5cf63c] py-2 px-3 rounded-full w-fit ">
+        <div className="flex items-center gap-2 bg-[#e1e7ff] py-2 px-3 rounded-full w-fit ">
           <span className="w-3 h-3 bg-linear-to-r from-[#5743ec] to-[#9B5CF6] rounded-full"></span>
 
           <p className="text-sm font-medium">New: AI-Powered Tools Available</p>
@@ -16,9 +16,8 @@ const Banner = () => {
           Supercharge Your <br />
           <span className="bg-linear-to-r from-[#5743ec] to-[#9B5CF6] bg-clip-text text-transparent ">
             {" "}
-            Digital
+            Digital Workflow
           </span>{" "}
-          Workflow
         </h2>
         <p className="text-md text-gray-500">
           Access premium AI tools, design assets, templates, and productivity{" "}
