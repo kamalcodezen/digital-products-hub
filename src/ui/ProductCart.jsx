@@ -1,30 +1,32 @@
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 const ProductCart = ({ product, addToCart, setAddToCart }) => {
   const { name, description, price, period, tag, features, icon } = product;
 
   const [isSelected, setIsSelected] = useState(false);
 
+  //   add cart
   const handleAddToCart = (product) => {
     const isExits = addToCart.find((cart) => cart.id == product.id);
     if (isExits) {
-    //   alert(`player already added`);
+      toast.error("Already added to cart ❌");
       return;
     } else {
       setIsSelected(true);
       setAddToCart([...addToCart, product]);
-    //   alert(`Cart add success`)
+      toast.success("Added to cart 🛒");
     }
   };
 
-//   console.log(addToCart);
+  //   console.log(addToCart);
 
   return (
     <section>
       <div className={`card mx-auto w-full  shadow-sm relative  rounded-xl `}>
         {/* badge rendering dynamically */}
-        <div className={`card-body space-y-1`}>
+        <div className={`card-body space-y-1 `}>
           {tag == "best seller" ? (
             <span className="badge badge-xs badge-warning bg-amber-200 py-3 rounded-full border-none px-4 text-amber-800 ml-auto">
               {tag}
@@ -46,7 +48,7 @@ const ProductCart = ({ product, addToCart, setAddToCart }) => {
             <div className="space-y-3">
               <h2 className="text-2xl font-bold">{name}</h2>
 
-              <p className={`text-gray-500`}>{description}</p>
+              <p className={`text-gray-500 min-h-[60px]`}>{description}</p>
             </div>
           </div>
 
@@ -57,6 +59,7 @@ const ProductCart = ({ product, addToCart, setAddToCart }) => {
             </p>
           </div>
 
+          {/* feature  */}
           <ul className="mt-2 flex flex-col flex-1 gap-2 text-xs">
             {features.map((feature, ind) => (
               <li key={ind}>

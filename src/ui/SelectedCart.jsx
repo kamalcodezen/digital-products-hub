@@ -1,4 +1,4 @@
-import { Key } from "lucide-react";
+import { toast } from "react-toastify";
 
 const SelectedCart = ({ addToCart, setAddToCart }) => {
   //   const { icon, name, price } = cart;
@@ -8,10 +8,12 @@ const SelectedCart = ({ addToCart, setAddToCart }) => {
   const handleRemoveCart = (cart) => {
     const isExits = addToCart.filter((selectCart) => selectCart.id != cart.id);
     setAddToCart(isExits);
+    toast.warn("Removed from cart ❌");
   };
 
   const handleAllCartRemove = () => {
     setAddToCart([]);
+    toast.info("Checkout successful ✅");
   };
 
   if (addToCart.length === 0) {

@@ -7,6 +7,7 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 import Pricing from "../components/pricingSection/Pricing";
 import Rating from "../components/ratingSection/Rating";
+import { ToastContainer } from "react-toastify";
 
 const productDataFetch = fetch("/productData.json").then((res) => res.json());
 
@@ -45,6 +46,8 @@ const [addToCart,setAddToCart]=useState([])
       <div className="bg-[#101727]">
         <Footer />
       </div>
+
+      <ToastContainer/>
     </div>
   );
 };
